@@ -38,6 +38,10 @@
   background-color: var(--main-color);
 }
 
+body {
+  background-color: var(--white);
+}
+
 html {
   font-size: 62.5%;
   overflow-x: hidden;
@@ -148,6 +152,7 @@ section {
 /* +++++++++++++++++++++++++++++++++++++++++++++ */
 /* ---------- About Section Starts ---------- */
 .about {
+  background-color: var(--white);
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -179,12 +184,12 @@ section {
   color: var(--light-color);
   font-size: 1.5rem;
 }
-/* ---------- About Section End ---------- */
+/* ---------- About Section Ends ---------- */
 /* +++++++++++++++++++++++++++++++++++++++++++++ */
 /* ---------- Facility Section Starts ---------- */
 .facility .box-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   gap: 1.5rem;
   align-items: flex-start;
 }
@@ -193,7 +198,7 @@ section {
 }
 .facility .box-container .box img {
   height: 10rem;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
 .facility .box-container .box h3 {
   font-size: 2rem;
@@ -205,25 +210,64 @@ section {
   font-size: 1.5rem;
   color: var(--light-color);
 }
-/* ---------- Facility Section End ---------- */
+/* ---------- Facility Section Ends ---------- */
+/* +++++++++++++++++++++++++++++++++++++++++++++ */
+/* ---------- Menu Section Starts ---------- */
+.menu .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 25rem);
+  gap: 2rem;
+  align-items: flex-start;
+  justify-content: center;
+}
+.menu .box-container .box {
+  text-align: center;
+}
+.menu .box-container .box img {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.menu .box-container .box h3 {
+  font-size: 2rem;
+  color: var(--black);
+}
+/* ---------- Menu Section Ends ---------- */
+/* +++++++++++++++++++++++++++++++++++++++++++++ */
+/* ---------- Gallery Section Starts ---------- */
+.gallery .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 30rem);
+  gap: 1.5rem;
+  justify-content: center;
+}
+.gallery .box-container img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+/* ---------- Gallery Section Ends ---------- */
+/* +++++++++++++++++++++++++++++++++++++++++++++ */
+/* ---------- Team Section Starts ---------- */
+.team .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 30rem);
+  gap: 2rem;
+  justify-content: center;
+}
+.team .box-container .box {
+  text-align: center;
+}
+.team .box-container .box img {
+  width: 100%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+.team .box-container .box h3 {
+  font-size: 2rem;
+  color: var(--black);
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* ---------- Team Section End ---------- */
 
 /* ----------------- Media Queries  -----------------*/
 /* Header */
@@ -279,15 +323,17 @@ section {
   .about .content h3 {
     font-size: 3rem;
   }
-  
 }
 
 @media (max-width: 450px) {
   html {
     font-size: 50%;
   }
-    /* ++++++++++++ */
-  /* Ficility */
+
+  .heading img {
+    height: 3rem;
+  }
+
   .heading h3 {
     font-size: 3rem;
   }
